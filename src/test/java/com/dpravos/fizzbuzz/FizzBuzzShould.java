@@ -39,29 +39,12 @@ class FizzBuzzShould {
         assertEquals("Buzz", value);
     }
 
-    @Test
-    void return_fizzbuzz_when_number_is_15() {
+    @ParameterizedTest
+    @ValueSource( ints = {15, 30, 45})
+    void return_buzz_when_number_is_multiple_of_3_and_5(int number) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
-        String value = fizzBuzz.value(15);
-
-        assertEquals("FizzBuzz", value);
-    }
-
-    @Test
-    void return_fizzbuzz_when_number_is_30() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-
-        String value = fizzBuzz.value(30);
-
-        assertEquals("FizzBuzz", value);
-    }
-
-    @Test
-    void return_fizzbuzz_when_number_is_45() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-
-        String value = fizzBuzz.value(45);
+        String value = fizzBuzz.value(number);
 
         assertEquals("FizzBuzz", value);
     }
