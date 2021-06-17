@@ -3,6 +3,7 @@ package com.dpravos.fizzbuzz;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
+import org.junit.jupiter.params.provider.ValueSource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -18,29 +19,12 @@ class FizzBuzzShould {
         assertEquals(expectedValue, value);
     }
 
-    @Test
-    void return_fizz_when_number_is_3() {
+    @ParameterizedTest
+    @ValueSource( ints = {3, 6, 9})
+    void return_fizz_when_number_is_multiple_of_3(int number) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
-        String value = fizzBuzz.value(3);
-
-        assertEquals("Fizz", value);
-    }
-
-    @Test
-    void return_fizz_when_number_is_6() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-
-        String value = fizzBuzz.value(6);
-
-        assertEquals("Fizz", value);
-    }
-
-    @Test
-    void return_fizz_when_number_is_9() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
-
-        String value = fizzBuzz.value(9);
+        String value = fizzBuzz.value(number);
 
         assertEquals("Fizz", value);
     }
