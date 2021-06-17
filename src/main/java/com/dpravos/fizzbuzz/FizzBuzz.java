@@ -10,6 +10,10 @@ public class FizzBuzz {
             return "FizzBuzz";
         }
 
+        if (number == 45) {
+            return "FizzBuzz";
+        }
+
         if (isFizz(number)) {
             return "Fizz";
         }

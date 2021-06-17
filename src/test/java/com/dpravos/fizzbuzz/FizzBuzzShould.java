@@ -56,4 +56,13 @@ class FizzBuzzShould {
 
         assertEquals("FizzBuzz", value);
     }
+
+    @Test
+    void return_fizzbuzz_when_number_is_45() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String value = fizzBuzz.value(45);
+
+        assertEquals("FizzBuzz", value);
+    }
 }
