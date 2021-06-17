@@ -23,13 +23,13 @@ class FizzBuzzShould {
     void return_number_when_number_is_not_multiple_of_3_nor_of_5(int number, String expectedValue) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
-        String value = fizzBuzz.value(number);
+        String value = fizzBuzz.values()[number - 1];
 
         assertEquals(expectedValue, value);
     }
 
     @ParameterizedTest
-    @ValueSource( ints = {3, 6, 9})
+    @ValueSource(ints = {3, 6, 9})
     void return_fizz_when_number_is_multiple_of_3(int number) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
@@ -39,7 +39,7 @@ class FizzBuzzShould {
     }
 
     @ParameterizedTest
-    @ValueSource( ints = {5, 10, 20})
+    @ValueSource(ints = {5, 10, 20})
     void return_buzz_when_number_is_multiple_of_5(int number) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
@@ -49,7 +49,7 @@ class FizzBuzzShould {
     }
 
     @ParameterizedTest
-    @ValueSource( ints = {15, 30, 45})
+    @ValueSource(ints = {15, 30, 45})
     void return_buzz_when_number_is_multiple_of_3_and_5(int number) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
