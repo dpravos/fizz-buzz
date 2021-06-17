@@ -14,4 +14,13 @@ class FizzBuzzShould {
 
         assertEquals("1", value);
     }
+
+    @Test
+    void return_2_when_number_is_2() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String value = fizzBuzz.value(2);
+
+        assertEquals("2", value);
+    }
 }
