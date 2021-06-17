@@ -9,7 +9,7 @@ public class FizzBuzz {
         return values;
     }
 
-    public String value(int number) {
+    private String value(int number) {
         if (isFizz(number) && isBuzz(number)) {
             return "FizzBuzz";
         }

@@ -33,7 +33,7 @@ class FizzBuzzShould {
     void return_fizz_when_number_is_multiple_of_3(int number) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
-        String value = fizzBuzz.value(number);
+        String value = fizzBuzz.values()[number - 1];
 
         assertEquals("Fizz", value);
     }
@@ -43,7 +43,7 @@ class FizzBuzzShould {
     void return_buzz_when_number_is_multiple_of_5(int number) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
-        String value = fizzBuzz.value(number);
+        String value = fizzBuzz.values()[number - 1];
 
         assertEquals("Buzz", value);
     }
@@ -53,7 +53,7 @@ class FizzBuzzShould {
     void return_buzz_when_number_is_multiple_of_3_and_5(int number) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
-        String value = fizzBuzz.value(number);
+        String value = fizzBuzz.values()[number - 1];
 
         assertEquals("FizzBuzz", value);
     }
