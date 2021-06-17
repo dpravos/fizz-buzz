@@ -2,7 +2,7 @@ package com.dpravos.fizzbuzz;
 
 public class FizzBuzz {
     public String value(int number) {
-        if (number % 15 == 0) {
+        if (isFizz(number) && isBuzz(number)) {
             return "FizzBuzz";
         }
 
