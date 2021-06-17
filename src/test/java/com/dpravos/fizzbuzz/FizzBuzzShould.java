@@ -26,4 +26,13 @@ class FizzBuzzShould {
 
         assertEquals("Fizz", value);
     }
+
+    @Test
+    void return_fizz_when_number_is_6() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String value = fizzBuzz.value(6);
+
+        assertEquals("Fizz", value);
+    }
 }
