@@ -28,4 +28,14 @@ class FizzBuzzShould {
 
         assertEquals("Fizz", value);
     }
+
+    @ParameterizedTest
+    @ValueSource( ints = {5})
+    void return_buzz_when_number_is_multiple_of_5(int number) {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String value = fizzBuzz.value(number);
+
+        assertEquals("Buzz", value);
+    }
 }
