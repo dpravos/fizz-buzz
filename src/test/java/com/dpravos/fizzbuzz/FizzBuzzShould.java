@@ -1,5 +1,6 @@
 package com.dpravos.fizzbuzz;
 
+import org.junit.jupiter.api.Test;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
@@ -15,5 +16,14 @@ class FizzBuzzShould {
         String value = fizzBuzz.value(number);
 
         assertEquals(expectedValue, value);
+    }
+
+    @Test
+    void return_fizz_when_number_is_3() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String value = fizzBuzz.value(3);
+
+        assertEquals("Fizz", value);
     }
 }
