@@ -3,9 +3,9 @@ package com.dpravos.fizzbuzz;
 public class FizzBuzz {
     public String[] values() {
         String[] values = new String[100];
-        values[0] = value(1);
-        values[1] = value(2);
-        values[3] = value(4);
+        for (int i = 0; i < values.length; i++) {
+            values[i] = value(i + 1);
+        }
         return values;
     }
 
