@@ -30,7 +30,7 @@ class FizzBuzzShould {
     }
 
     @ParameterizedTest
-    @ValueSource( ints = {5, 10})
+    @ValueSource( ints = {5, 10, 20})
     void return_buzz_when_number_is_multiple_of_5(int number) {
         FizzBuzz fizzBuzz = new FizzBuzz();
 
