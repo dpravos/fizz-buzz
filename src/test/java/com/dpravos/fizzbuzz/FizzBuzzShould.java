@@ -23,4 +23,13 @@ class FizzBuzzShould {
 
         assertEquals("2", value);
     }
+
+    @Test
+    void return_4_when_number_is_4() {
+        FizzBuzz fizzBuzz = new FizzBuzz();
+
+        String value = fizzBuzz.value(4);
+
+        assertEquals("4", value);
+    }
 }
