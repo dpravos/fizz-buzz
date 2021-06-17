@@ -1,11 +1,11 @@
 package com.dpravos.fizzbuzz;
 
+import java.util.Arrays;
+
 public class FizzBuzz {
     public String[] values() {
         String[] values = new String[100];
-        for (int i = 0; i < values.length; i++) {
-            values[i] = value(i + 1);
-        }
+        Arrays.setAll(values, i -> value(i + 1));
         return values;
     }
 
