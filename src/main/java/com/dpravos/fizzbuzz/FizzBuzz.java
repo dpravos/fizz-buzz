@@ -1,6 +1,10 @@
 package com.dpravos.fizzbuzz;
 
 public class FizzBuzz {
+    public String[] values() {
+        return new String[100];
+    }
+
     public String value(int number) {
         if (isFizz(number) && isBuzz(number)) {
             return "FizzBuzz";
